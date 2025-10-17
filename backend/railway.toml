@@ -1,0 +1,12 @@
+# Force Railway to use Node 18 and treat backend as Node app
+[build]
+builder = "NIXPACKS"
+
+[phases.setup]
+nixPkgs = ["nodejs_18"]
+
+[phases.build]
+cmds = ["npm install"]
+
+[phases.start]
+cmds = ["npm start"]
